@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion-Face</title>
+    <style>
+        body{
+            background-color: #FF9A8B;
+            background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+        }
+        .app-title{
+            text-align: center;
+        }
+        .smile-img{
+            height:150px;
+        }
+        .btn-toggle{
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            color: black;
+            margin:10px 20px;
+            
+            
+
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        
+        
+        .emoji-container{
+            background-color:#fff;
+            width:400px;
+            margin: 10px auto;
+            display:flex;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .btn-toggle:hover{
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        @media screen and(max-width:600px){
+            .emoji-container{
+                width:80%;
+
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Emotion Face Toggler</h1>
+    <div class="emoji-container">
+        <img src="smile.png" class="smile-img" id="emoji"/>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-toggle btn-on"  onclick="smileOn()">Smile</button>
+        <button class="btn-toggle btn-on" onclick="sadOn()">Sad</button>
+        <button class="btn-toggle btn-on" onclick="cryingOn()">Crying</button>
+        <button class="btn-toggle btn-on" onclick="laughingOn()">Laughing</button>
+        <button class="btn-toggle btn-on" onclick="loveOn()">Love</button>
+        <button class="btn-toggle btn-on" onclick="happyOn()">Happy</button>
+    </div>
+
+    <script>
+        function smileOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='smile.png';
+        }
+        function sadOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='sad.png';
+        }
+        function cryingOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='crying.png';
+        }
+        function laughingOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='laughing.png';
+        }
+        function loveOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='love.png';
+        }
+        function happyOn(){
+            const emojiElement=document.getElementById('emoji');
+            emojiElement.src='happy.png';
+        }
+        
+    </script>
+    
+</body>
+</html>
